@@ -6,7 +6,7 @@
 
 ## 🚀 Live Demo
 
-[View the live app](YOUR_VERCEL_URL_HERE)
+[View the live app](https://product-dashboard-app-rho.vercel.app/)
 
 ---
 
@@ -150,4 +150,4 @@ npm run lint
 
 ## 📄 License
 
-MIT © \[Your Name]
+MIT © \[Olotuah]
