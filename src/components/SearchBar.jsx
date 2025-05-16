@@ -8,7 +8,7 @@ function SearchBar({ value, onChange }) {
       placeholder="Search products..."
       value={value}
       onChange={e => onChange(e.target.value)}
-      className="w-full sm:w-1/2 border border-gray-300 p-2 rounded"
+      className="w-full sm:w-1/2 border border-gray-300 p-2 rounded "
     />
   );
 }

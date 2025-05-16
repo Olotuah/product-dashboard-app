@@ -1,50 +1,82 @@
-Product Dashboard App
+# Product Dashboard App
 
-A mini admin panel built with React and Tailwind CSS, featuring product listing, search, category filtering, pagination, and a modal form to add new products.
+**A mini admin panel for managing products**, built with React, Vite, and Tailwind CSS. This dashboard features product listing, search, category filtering, pagination, and a modal form for adding new products, along with a 404 Not Found page for unmatched routes.
 
-Live Demo
+---
 
-View the live app
+## 🚀 Live Demo
 
-🛠 Tech Stack
+[View the live app](YOUR_VERCEL_URL_HERE)
 
-Framework: React (Vite)
+---
 
-Styling: Tailwind CSS v3.4.1
+## 📂 Folder Structure
 
-Forms & Validation: React Hook Form + Zod
+```
+product-dashboard-app/
+├── public/                 # Static assets
+│   └── vite.svg
+├── src/
+│   ├── assets/             # Images, fonts
+│   ├── components/         # Reusable UI components
+│   │   ├── ProductCard.jsx
+│   │   ├── SearchBar.jsx
+│   │   ├── CategoryFilter.jsx
+│   │   ├── Pagination.jsx
+│   │   └── CreateProductModal.jsx
+│   ├── pages/              # Page views
+│   │   ├── ProductDashboard.jsx
+│   │   └── NotFound.jsx    # 404 page for unmatched routes
+│   ├── store/              # (Optional) Zustand store
+│   │   └── useProductStore.js
+│   ├── App.jsx             # Application root and routing
+│   ├── main.jsx            # React DOM entry point
+│   └── index.css           # Tailwind imports & global styles
+├── .gitignore
+├── LICENSE
+├── package.json
+├── postcss.config.cjs      # PostCSS + Tailwind setup
+├── tailwind.config.js      # Tailwind configuration
+├── vite.config.js          # Vite configuration
+└── README.md               # This file
+```
 
-API Requests: Axios
+---
 
-State Management: Local React state
+## ⚙️ Tech Stack
 
-Deployment: Vercel (or Netlify)
+* **Core:** React, Vite
+* **Styling:** Tailwind CSS v3.4.1
+* **Forms & Validation:** React Hook Form + Zod
+* **Routing:** React Router v6
+* **State Management:** Local React state (or Zustand)
+* **API Calls:** Axios
+* **Deployment:** Vercel or Netlify
 
-🚀 Features
+---
 
-Responsive Dashboard: Grid layout adapts from mobile to desktop
+## ✨ Features
 
-Product Fetch: Retrieves products from https://fakestoreapi.com
+1. **Responsive Dashboard** — Flexible CSS grid layout with auto-fit columns
+2. **Product Listing** — Fetch from `https://fakestoreapi.com/products` via Axios
+3. **Search & Filter** — Real-time search bar and category dropdown
+4. **Pagination** — Page-wise product navigation
+5. **Create Product Modal** — Form with Zod validation to add new products
+6. **404 Not Found Page** — Friendly fallback for unknown routes
 
-Search: Real-time filtering by product title
+---
 
-Category Filter: Dropdown to filter by category
+## 🔧 Getting Started
 
-Pagination: Navigate through products in pages
+### Prerequisites
 
-Create Product: Modal with form validation to add new items
+* **Node.js** v16+
+* **npm** or **Yarn**
 
-📦 Getting Started
+### Installation
 
-Prerequisites
-
-Node.js v16+
-
-npm or Yarn
-
-Setup
-
-# Clone the repo
+```bash
+# Clone repository
 git clone https://github.com/yourusername/product-dashboard-app.git
 cd product-dashboard-app
 
@@ -53,41 +85,69 @@ npm install
 
 # Start development server
 npm run dev
+```
 
-Open http://localhost:5173 to view.
+Open [http://localhost:5173](http://localhost:5173) in your browser.
 
-📄 Usage
+---
 
-Search: Type in the search bar to filter products by name
+## 📖 Usage
 
-Filter: Select a category from the dropdown
+* **Search:** Type to filter products by title
+* **Filter:** Choose a category from the dropdown
+* **Pagination:** Click Next/Prev to navigate pages
+* **Add Product:** Click **+ Create Product**, fill the modal form, submit
+* **404 Page:** Navigate to an undefined route to see the NotFound view
 
-Pagination: Use Next/Previous buttons to navigate pages
+---
 
-Add Product: Click + Create Product, fill the form, and submit
+## 🚀 Deployment to Vercel
 
-🎨 Customization
+1. Push to GitHub
+2. Import the repo in Vercel
+3. Use default settings (Root `/`, Build `npm run build`)
+4. Deploy and update the Live Demo link above
 
-Tailwind config: tailwind.config.js to adjust colors, fonts, breakpoints
+---
 
-Animations: Add Tailwind animate- utilities or Framer Motion for advanced motion
+## 🛠 Customization & Extensibility
 
-✅ Deployment
+* **Tailwind config:** Tweak `tailwind.config.js` for themes or breakpoints
+* **Animations:** Add Tailwind `animate-` utilities or integrate Framer Motion
+* **State:** Swap local state for Zustand or Redux in `store/` directory
 
-Push your code to GitHub
+---
 
-Import the repo into Vercel
+## 🔍 Code Snippet & Routing Example
 
-Set the Root Directory to / and Build Command to npm run build
+```jsx
+// App.jsx
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import ProductDashboard from './pages/ProductDashboard';
+import NotFound from './pages/NotFound';
 
-Deploy and update the Live Demo link above
+export default function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<ProductDashboard />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </BrowserRouter>
+  );
+}
+```
 
-🔧 Lint & Format
+---
 
-# ESLint
+## ✔️ Lint & Format
+
+```bash
 npm run lint
+```
 
-📚 License
+---
 
-MIT © Your Name
+## 📄 License
 
+MIT © \[Your Name]
