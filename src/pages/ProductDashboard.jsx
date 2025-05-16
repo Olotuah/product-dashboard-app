@@ -68,7 +68,8 @@ function ProductDashboard() {
         <CategoryFilter categories={categories} value={selectedCategory} onChange={setSelectedCategory} />
       </div>
 
-      <div className="grid gap-6 grid-cols-[repeat(auto-fit,minmax(16rem,1fr))] mb-6">
+      <div className="grid gap-6 grid-cols-[repeat(auto-fit,minmax(16rem,16rem))] justify-center mb-6">
+
         {currentProducts.map(product => (
           <ProductCard key={product.id} product={product} />
         ))}
